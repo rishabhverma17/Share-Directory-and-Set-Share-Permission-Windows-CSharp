@@ -1,7 +1,5 @@
-﻿using System;
+using System;
 using System.Management;
-using System.Windows.Forms;
-using System.IO;
 using System.Globalization;
 
 namespace Aperta_NodalInstaller
@@ -25,12 +23,12 @@ namespace Aperta_NodalInstaller
                 inputParameters["Path"] = strSharePath;
                 inputParameters["Type"] = 0x0;//disk drive 
                 inputParameters["MaximumAllowed"] = null;
-                inputParameters["Access"] = null;//Make Everyone has full control access
+                inputParameters["Access"] = null;
 
                 inputParameters["Password"] = null;
 
 
-                outputParameters = oManagementClass.InvokeMethod("Create", inputParameters, null);//// Invoke the method on the ManagementClass object
+                outputParameters = oManagementClass.InvokeMethod("Create", inputParameters, null);
 
                 if ((uint)(outputParameters.Properties["ReturnValue"].Value) != 0)
                 {
