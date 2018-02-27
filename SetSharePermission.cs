@@ -1,7 +1,5 @@
-﻿using System;
+using System;
 using System.Management;
-using System.Windows.Forms;
-using System.IO;
 using System.Globalization;
 
 namespace Aperta_NodalInstaller
